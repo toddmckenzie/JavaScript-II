@@ -1,7 +1,15 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
+function hello() {
+  const name = "Todd";
 
+  function greet() {
+    console.log('Hello ' + name); //going out of lexical scope to grab name, thus a closure;
+  }
+  greet()
+}
 
+hello();
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
 

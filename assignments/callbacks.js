@@ -79,8 +79,19 @@ contains('Gum', items, function(item, arr) {
 
 /* STRETCH PROBLEM */
 
+let nums = [1,2,2,3,4,4,4,4,4,5,5,5,6,1,1,1,2,2];
+
 function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+  return cb(array);
 }
+
+removeDuplicates(nums, function(arr) {
+  let newArr = [];
+  arr.forEach(item => {
+    (!newArr.includes(item))?newArr.push(item):null;
+  })
+  return newArr;
+});
